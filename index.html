@@ -18,7 +18,7 @@
         <div class="form-floating mb-3">
           <input oninput="vallidateAllInputs(this)" type="text " class="form-control" id="ProdName" placeholder=" Product Name" />
           <div id="alertPrice" class="alert alert-danger d-none">
-            <p>min 1000 max 99999</p>
+            <p>First letter capital</p>
           </div>
           <label for="ProdName">Product Name</label>
         </div>
@@ -36,7 +36,7 @@
         <div class="form-floating mb-3">
           <input list="categoryList" oninput="vallidateAllInputs(this)" type="text " class="form-control" id="ProdCategory" placeholder=" Product category" />
           <div id="alertPrice" class="alert alert-danger d-none">
-            <p>min 1000 max 99999</p>
+            <p>Choose the category correctly</p>
           </div>
           <datalist id="categoryList">
             <option value="tv"></option>
@@ -56,7 +56,7 @@
         <div class="form-floating mb-3">
           <textarea oninput="vallidateAllInputs(this)" type="text " class="form-control" id="ProductDesc" placeholder=" Product Desc" >  </textarea>
           <div id="alertPrice" class="alert alert-danger d-none">
-            <p>min 1000 max 99999</p>
+            <p>Minimum 6 characters and maximum 20</p>
           </div>
           <label for="ProductDesc">Product Desc</label>
         </div>
@@ -95,5 +95,6 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
 
 
