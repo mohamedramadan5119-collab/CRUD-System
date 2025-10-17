@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body >
+
+    <section class="home">
+      <div class="container " >
+      <div class="w-75 m-auto p-5 ">
+        <h2 class=" text-center font-monospace text-info">CRUD System</h2>
+
+        <div class="form-floating mb-3">
+          <input oninput="vallidateAllInputs(this)" type="text " class="form-control" id="ProdName" placeholder=" Product Name" />
+          <div id="alertPrice" class="alert alert-danger d-none">
+            <p>min 1000 max 99999</p>
+          </div>
+          <label for="ProdName">Product Name</label>
+        </div>
+
+
+        <div class="form-floating mb-3">
+          <input oninput="vallidateAllInputs(this)" type="text " class="form-control" id="ProdPrice" placeholder=" Product Price" />
+          <div id="alertPrice" class="alert alert-danger d-none">
+            <p>min 1000 max 99999</p>
+          </div>
+          <label for="ProdPrice">Product Price</label>
+        </div>
+
+
+        <div class="form-floating mb-3">
+          <input list="categoryList" oninput="vallidateAllInputs(this)" type="text " class="form-control" id="ProdCategory" placeholder=" Product category" />
+          <div id="alertPrice" class="alert alert-danger d-none">
+            <p>min 1000 max 99999</p>
+          </div>
+          <datalist id="categoryList">
+            <option value="tv"></option>
+            <option value="mobail"></option>
+            <option value="laptop"></option>
+            <option value="screen"></option>
+          </datalist>
+          <label for="ProdCategory">Product category</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input accept="image/*" type="file"   class="form-control " id="ProdImage" placeholder="Product Image"></input>
+          <label for="ProdImage"></label>
+        </div>
+
+
+        <div class="form-floating mb-3">
+          <textarea oninput="vallidateAllInputs(this)" type="text " class="form-control" id="ProductDesc" placeholder=" Product Desc" >  </textarea>
+          <div id="alertPrice" class="alert alert-danger d-none">
+            <p>min 1000 max 99999</p>
+          </div>
+          <label for="ProductDesc">Product Desc</label>
+        </div>
+
+
+        <button id="addbtn" onclick="addProduct()" class="btn btn-info d-block"> add product</button>
+        <button id="updatebtn" onclick="updateproduct()" class="btn btn-warning d-none"> update product</button>
+
+        <div class="form-floating mb-3">
+            <input
+              type="search"
+              oninput="searchProduct()"
+              class="form-control mt-3"
+              id="productSearch"
+              placeholder="Product Search"
+            />
+            <label for="productSearch">product Search</label>
+          </div>
+      </div>
+    </div>
+    </section>
+
+
+    <div class="container">
+      <div class="row" id="tableData">
+        
+      </div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
