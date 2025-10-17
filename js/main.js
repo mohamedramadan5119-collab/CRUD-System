@@ -146,7 +146,7 @@ function vallidateAllInputs(element){
     var regex={
         ProdName:/^[A-Z][a-z]{3,5}$/,
         ProdPrice:/^[1-9][0-9]{3,5}$/,
-        ProdCategory:/^(TV|mobail|laptop|screen)$/,
+        ProdCategory:/^(TV|mobile|laptop|screen)$/,
         ProductDesc:/^.{6,20}$/,
     }
 
@@ -164,6 +164,7 @@ function vallidateAllInputs(element){
         return false;
     }
 }
+
 
 
 
